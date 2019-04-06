@@ -1,0 +1,11 @@
+Package: NDRa
+Title: Generate Simulated Naming Latencies and Pronunciations in the NDRa Model
+Version: 1.0
+Authors@R: person("Peter", "Hendrix", email = "peter.hendrix@gmail.com", role = c("aut", "cre"))
+Description: The NDRa model is a single-route model of response times in the reading aloud task. This package allows users to generate simulated naming latencies and pronunciations for words and nonwords in the NDRa model. 
+Depends: R (>= 3.3.3), ndl, pbapply
+Imports: ndl, pbapply
+License: GNU General Public License v3.0
+Encoding: UTF-8
+LazyData: yes
+RoxygenNote: 6.1.1.9000
