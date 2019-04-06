@@ -4,8 +4,9 @@
 #' lexicon A dataframe with the colums "Word" and "Gestures". "Gestures" are 
 #' demi-syllables (see Klatt, 1979).
 #' @param
-#' weightsSem An orthography-to-semantics weight matrix. The default, "weights_sem" uses 
-#' the weight matrix from Baayen et al. (2011).
+#' weightsSem An orthography-to-semantics weight matrix with letter unigrams and 
+#' bigrams as cues and words as outcomes. The default, "weights_sem" uses 
+#' the weight matrix from Hendrix et al. (2018).
 #' @param
 #' weightsPhon A phonology-to-semantic weight matrix. The default, "weigths_phon" uses 
 #' the weight matrix from Hendrix (2018).
@@ -29,10 +30,6 @@
 #' elp$SimPron = simulate(elp$Word)
 #' 
 #' @references
-#' Baayen, R. H., Milin, P., Filipovic-Durdevic, D., Hendrix, P., & Marelli, M. (2011). 
-#' An amorphous model for morphological processing in visual comprehension based on naive 
-#' discriminative learning. Psychological review, 118(3), 438.
-#' 
 #' Hendrix, P, Ramscar, M., & Baayen, R. H. (2019). NDRa: a single route model of 
 #' response times in the reading aloud task based on discriminative learning. Manuscript.
 #'

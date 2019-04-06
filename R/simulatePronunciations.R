@@ -27,10 +27,6 @@
 #' elp$SimPron = simulatePronunciations(elp$Word)
 #' 
 #' @references
-#' Baayen, R. H., Milin, P., Filipovic-Durdevic, D., Hendrix, P., & Marelli, M. (2011). 
-#' An amorphous model for morphological processing in visual comprehension based on naive 
-#' discriminative learning. Psychological review, 118(3), 438.
-#' 
 #' Hendrix, P, Ramscar, M., & Baayen, R. H. (2019). NDRa: a single route model of 
 #' response times in the reading aloud task based on discriminative learning. Manuscript.
 #'
