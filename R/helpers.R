@@ -76,27 +76,6 @@ entropy = function(v) {
 }
 
 
-# Check if all cues are in the training data
-inTraining = function(cues, gestures, weightsSem, weightsPhon) {
-  
-  # Check if there are missing orthographic cues
-  missingOrthographicCues = sum(!(unlist(strsplit(cues, "_")) %in% 
-    rownames(weightsSem))) > 0
-  
-  # Check of there are missing phonological cues
-  missingPhonologicalCues = sum(!(unlist(strsplit(gestures, "_")) %in% 
-    rownames(weightsPhon))) > 0
-  
-  # Return
-  if (missingOrthographicCues | missingPhonologicalCues) {
-    return(FALSE)
-  } else {
-    return(TRUE)
-  }
-  
-}
-
-
 # Get vowel position
 vowelPosition = function(word) {
 
@@ -168,7 +147,7 @@ candidatesTable = function(w, diphone="first") {
 # Get first demi-syllable
 firstDemisyllable = function(word, weightsPhon, weightsSem, wordsSem, 
                              wordsPhon, firstvowel, compsearly, 
-                             actcompsearly, compsoffset, compslate) {
+                             actcompsearly) {
   
   # Define variables
   cues = unlist(strsplit(orthoCoding(word, grams = c(2)), "_"))
@@ -351,7 +330,7 @@ secondDemisyllable = function(word, weightsPhon, weightsSem, wordsSem,
 
 
 # Get simulated pronunciation
-simulatePronunciation = function(word, lexicon, weightsSem, weightsPhon) {
+simulatePronunciation = function(word, weightsSem, weightsPhon) {
   
   # Define variables
   vowels = c("a", "e", "i", "o", "u", "y")
@@ -457,7 +436,7 @@ simulatePronunciation = function(word, lexicon, weightsSem, weightsPhon) {
   # Calculate the most activated word-initial diphone
   first = firstDemisyllable(word, weightsPhon, weightsSem, wordsSem,
                             wordsPhon, firstvowel, compsearly,
-                            actcompsearly, compsoffset, compslate)
+                            actcompsearly)
  
   # Calculate the activated word-final diphone
   second = secondDemisyllable(word, weightsPhon, weightsSem, wordsSem,

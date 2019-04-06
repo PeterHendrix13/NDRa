@@ -38,14 +38,16 @@
 simulateRTs = function(lexicon = lex,
                        weightsSem = weights_sem,
                        weightsPhon = weights_phon,
-                       parameters = list("wSem" = 0.20,
+                       parameters = list("wSem" = 0.200,
                                          "wPhon1" = 0.050,
                                          "wPhon2" = 0.098,
-                                         "wH" = -0.152,
-                                         "wCompl" = 1.27,
-                                         "backoff" = 0.01,
-                                         "wlex" = 4.7,
-                                         "N" = 20),
+                                         "wH" = 0.152,
+                                         "wCompl" = 1.270,
+                                         "backoff" = 0.010,
+                                         "wlex" = 4.700,
+                                         "N" = 20,
+                                         "wAct" = 0.055,
+                                         "rtConst" = 450),
                        verbose = TRUE) {
   
   # Feedback for start of simulation
@@ -136,12 +138,14 @@ simulateRTs = function(lexicon = lex,
   if (verbose) {
     cat("   Calculating simulated reaction times\n")
   }
-  lexicon$SimRT =  
+  lexicon$Activation =  
     1 / (lexicon$ActLemmaShifted ^ parameters$wSem *
     lexicon$PhonActTotalShifted ^ parameters$wPhon1 *
     lexicon$PhonAct2TotalShifted ^ parameters$wPhon2 * 
-    lexicon$Hnaming ^ -parameters$wH *
+    lexicon$Hnaming ^ parameters$wH *
     lexicon$VisualComplexity ^ -parameters$wCompl)
+  
+  lexicon$SimRT = parameters$wAct * lexicon$Activation + parameters$rtConst
   
   # Return simulated RTs
   return(lexicon$SimRT)

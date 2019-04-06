@@ -55,10 +55,10 @@ simulatePronunciations = function(lexicon = lex,
   # Simulate pronunciations
   if (parallel) {
     prons = unlist(pblapply(lexicon$Word, simulatePronunciation,
-      lexicon, ws, wp, cl = numCores))
+      ws, wp, cl = numCores))
   } else {
     prons = pbsapply(lexicon$Word, simulatePronunciation,
-      lexicon, ws, wp, USE.NAMES = FALSE)
+      ws, wp, USE.NAMES = FALSE)
   }
   
   # Return

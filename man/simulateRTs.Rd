@@ -6,8 +6,8 @@
 \usage{
 simulateRTs(lexicon = lex, weightsSem = weights_sem,
   weightsPhon = weights_phon, parameters = list(wSem = 0.2, wPhon1 =
-  0.05, wPhon2 = 0.098, wH = -0.152, wCompl = 1.27, backoff = 0.01, wlex =
-  4.7, N = 20), verbose = TRUE)
+  0.05, wPhon2 = 0.098, wH = 0.152, wCompl = 1.27, backoff = 0.01, wlex =
+  4.7, N = 20, wAct = 0.055, rtConst = 450), verbose = TRUE)
 }
 \arguments{
 \item{lexicon}{A dataframe with the colums "Word" and "Gestures". "Gestures" are 
