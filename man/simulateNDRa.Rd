@@ -6,9 +6,9 @@
 \usage{
 simulateNDRa(lexicon = lex, weightsSem = weights_sem,
   weightsPhon = weights_phon, parameters = list(wSem = 0.2, wPhon1 =
-  0.05, wPhon2 = 0.098, wH = -0.152, wCompl = 1.27, backoff = 0.01, wlex =
-  4.7, N = 20), parallel = TRUE, numCores = detectCores(),
-  verbose = TRUE)
+  0.05, wPhon2 = 0.098, wH = 0.152, wCompl = 1.27, backoff = 0.01, wlex =
+  4.7, N = 20, wAct = 0.055, rtConst = 450), parallel = TRUE,
+  numCores = detectCores(), verbose = TRUE)
 }
 \arguments{
 \item{weightsSem}{An orthography-to-semantics weight matrix with letter unigrams and 
@@ -19,7 +19,8 @@ the weight matrix from Hendrix et al. (2018).}
 the weight matrix from Hendrix (2018).}
 
 \item{parameters}{A list with the model parameters "wSem", "wPhon1", "wPhon2", "wH", "wCompl", 
-"backoff", "wlex", and "N". The default values are the values used by Hendrix (2018). 
+"backoff", "wlex", "N", "wAct", and "rtConst". The default values are the values used 
+by Hendrix (2018). 
 For more information, also see Hendrix (2018).}
 
 \item{parallel}{Should computations be carried out in parallel? Defaults to TRUE.}

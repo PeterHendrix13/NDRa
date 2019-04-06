@@ -22,7 +22,8 @@ cues and words as outcomes. The default, "weigths_phon" uses the weight matrix
 from Hendrix et al. (2018).}
 
 \item{parameters}{A list with the model parameters "wSem", "wPhon1", "wPhon2", "wH", "wCompl", 
-"backoff", "wlex", and "N". The default values are the values used by Hendrix (2018). 
+"backoff", "wlex", "N", "wAct", and "rtConst". The default values are the values used 
+by Hendrix (2018). 
 For more information, also see Hendrix et al. (2018).}
 }
 \description{

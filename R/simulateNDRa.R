@@ -12,7 +12,8 @@
 #' the weight matrix from Hendrix (2018).
 #' @param
 #' parameters A list with the model parameters "wSem", "wPhon1", "wPhon2", "wH", "wCompl", 
-#' "backoff", "wlex", and "N". The default values are the values used by Hendrix (2018). 
+#' "backoff", "wlex", "N", "wAct", and "rtConst". The default values are the values used 
+#' by Hendrix (2018). 
 #' For more information, also see Hendrix (2018).
 #' @param
 #' parallel Should computations be carried out in parallel? Defaults to TRUE.
@@ -39,14 +40,16 @@
 simulateNDRa = function(lexicon = lex,
                         weightsSem = weights_sem,
                         weightsPhon = weights_phon,
-                        parameters = list("wSem" = 0.20,
+                        parameters = list("wSem" = 0.200,
                                           "wPhon1" = 0.050,
                                           "wPhon2" = 0.098,
-                                          "wH" = -0.152,
-                                          "wCompl" = 1.27,
-                                          "backoff" = 0.01,
-                                          "wlex" = 4.7,
-                                          "N" = 20),
+                                          "wH" = 0.152,
+                                          "wCompl" = 1.270,
+                                          "backoff" = 0.010,
+                                          "wlex" = 4.700,
+                                          "N" = 20,
+                                          "wAct" = 0.055,
+                                          "rtConst" = 450),
                         parallel = TRUE,
                         numCores = detectCores(),
                         verbose = TRUE) {
