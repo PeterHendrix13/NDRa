@@ -10,7 +10,7 @@
 #' data(elp)
 #' 
 #' # Define gestures
-#' elp$SimRT = sapply(elp$Phon, gestures)
+#' elp$Gestures = sapply(elp$Phon, gestures)
 
 # Define gestures
 gestures = function(pron = "b8r") {

@@ -4,9 +4,10 @@
 \name{elp}
 \alias{elp}
 \title{Input lexicon ELP simulations}
-\format{A data frame with 2,524 rows and 3 columns:
+\format{A data frame with 2,510 rows and 4 columns:
 \describe{
   \item{\code{Word}}{a mono-syllabic mono-morphemic word}
+  \item{\code{Pron}}{the pronunciation of the word in DISC format}
   \item{\code{Gestures}}{an approximation of the acoustic gestures required for the 
   pronunciation of the word through demi-syllables (see Klatt, 1979)}
   \item{\code{RTnaming}}{the naming latency for the word in the English Lexicon 

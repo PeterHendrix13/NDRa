@@ -17,5 +17,5 @@ Generate gestures for a word or nonword.
 data(elp)
 
 # Define gestures
-elp$SimRT = sapply(elp$Phon, gestures)
+elp$Gestures = sapply(elp$Phon, gestures)
 }

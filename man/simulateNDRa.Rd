@@ -37,7 +37,7 @@ demi-syllables (see Klatt, 1979).
 data(elp)
 
 # Generate simulated naming latencies and pronunciations
-elp$SimPron = simulate(elp$Word)
+elp = simulateNDRa(elp)
 
 }
 \references{

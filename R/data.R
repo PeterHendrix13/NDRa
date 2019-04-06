@@ -2,7 +2,7 @@
 #'
 #' Orthography to semantics weight matrix generated with version 0.2.18 of the ndl package.
 #'
-#' @format A matrix with 664 rows and 6,768 columns:
+#' @format A matrix with 754 rows and 3,198 columns:
 #' \describe{
 #'   \item{\code{rows}}{letter unigrams and bigrams}
 #'   \item{\code{columns}}{words}
@@ -15,7 +15,7 @@
 #'
 #' Phonology to semantics weight matrix generated with version 0.2.18 of the ndl package.
 #'
-#' @format A matrix with 1,358 rows and 3,908 columns:
+#' @format A matrix with 1,228 rows and 3,198 columns:
 #' \describe{
 #'   \item{\code{rows}}{demi-syllables (see Klatt, 1979)}
 #'   \item{\code{columns}}{words}
@@ -32,9 +32,10 @@
 #'
 #' The input lexicon used for the ELP simulations in Hendrix (2018).
 #'
-#' @format A data frame with 2,524 rows and 3 columns:
+#' @format A data frame with 2,510 rows and 4 columns:
 #' \describe{
 #'   \item{\code{Word}}{a mono-syllabic mono-morphemic word}
+#'   \item{\code{Pron}}{the pronunciation of the word in DISC format}
 #'   \item{\code{Gestures}}{an approximation of the acoustic gestures required for the 
 #'   pronunciation of the word through demi-syllables (see Klatt, 1979)}
 #'   \item{\code{RTnaming}}{the naming latency for the word in the English Lexicon 

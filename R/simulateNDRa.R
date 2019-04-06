@@ -20,14 +20,14 @@
 #' numCores The number of cores to use for parallel computation. By default all 
 #' available cores are used.
 #' 
-#' @import ndl pbapply
+#' @import ndl pbapply parallel
 #' @export
 #' @examples
 #' # Load data for the ELP simulations in Hendrix (2018)
 #' data(elp)
 #' 
 #' # Generate simulated naming latencies and pronunciations
-#' elp$SimPron = simulate(elp$Word)
+#' elp = simulateNDRa(elp)
 #' 
 #' @references
 #' Hendrix, P, Ramscar, M., & Baayen, R. H. (2019). NDRa: a single route model of 

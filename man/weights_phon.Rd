@@ -4,7 +4,7 @@
 \name{weights_phon}
 \alias{weights_phon}
 \title{Phonology to semantics weight matrix}
-\format{A matrix with 1,358 rows and 3,908 columns:
+\format{A matrix with 1,228 rows and 3,198 columns:
 \describe{
   \item{\code{rows}}{demi-syllables (see Klatt, 1979)}
   \item{\code{columns}}{words}

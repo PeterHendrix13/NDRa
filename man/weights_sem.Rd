@@ -4,7 +4,7 @@
 \name{weights_sem}
 \alias{weights_sem}
 \title{Orthography to semantics weight matrix}
-\format{A matrix with 664 rows and 6,768 columns:
+\format{A matrix with 754 rows and 3,198 columns:
 \describe{
   \item{\code{rows}}{letter unigrams and bigrams}
   \item{\code{columns}}{words}

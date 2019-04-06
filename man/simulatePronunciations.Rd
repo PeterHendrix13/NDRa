@@ -33,7 +33,7 @@ Generate simulated pronunciation for a set of words or nonwords.
 data(elp)
 
 # Generate simulated pronunciations for a lexicon
-elp$SimPron = simulatePronunciations(elp$Word)
+elp$SimPron = simulatePronunciations(elp)
 
 }
 \references{

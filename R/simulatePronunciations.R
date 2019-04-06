@@ -24,7 +24,7 @@
 #' data(elp)
 #' 
 #' # Generate simulated pronunciations for a lexicon
-#' elp$SimPron = simulatePronunciations(elp$Word)
+#' elp$SimPron = simulatePronunciations(elp)
 #' 
 #' @references
 #' Hendrix, P, Ramscar, M., & Baayen, R. H. (2019). NDRa: a single route model of 
